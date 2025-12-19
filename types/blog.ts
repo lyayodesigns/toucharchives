@@ -15,6 +15,7 @@ export interface BlogPost {
     title: string
   }>
   publishedAt: string
+  _updatedAt?: string
   excerpt?: string
   body?: any
 }

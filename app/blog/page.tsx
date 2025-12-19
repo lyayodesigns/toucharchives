@@ -1,4 +1,5 @@
 import Image from "next/image"
+import Link from "next/link"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { ChevronRight } from "lucide-react"
@@ -65,7 +66,7 @@ export default async function BlogPage() {
                   >
                     <div className="grid lg:grid-cols-[400px_1fr] gap-0">
                       {/* Featured Image */}
-                      <div className="relative h-[250px] lg:h-[280px] overflow-hidden group">
+                      <Link href={`/blog/${post.slug.current}`} className="relative h-[250px] lg:h-[280px] overflow-hidden group">
                         {post.mainImage ? (
                           <Image
                             src={urlFor(post.mainImage).width(800).height(600).url()}
@@ -78,7 +79,7 @@ export default async function BlogPage() {
                             <span className="text-muted-foreground">No image</span>
                           </div>
                         )}
-                      </div>
+                      </Link>
 
                       {/* Content */}
                       <CardContent className="p-6 lg:p-8 flex flex-col justify-center">
@@ -97,22 +98,26 @@ export default async function BlogPage() {
                         )}
 
                         {/* Title */}
-                        <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-3 text-balance transition-colors duration-300 hover:text-primary cursor-pointer">
-                          {post.title}
-                        </h2>
+                        <Link href={`/blog/${post.slug.current}`}>
+                          <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-3 text-balance transition-colors duration-300 hover:text-primary cursor-pointer">
+                            {post.title}
+                          </h2>
+                        </Link>
 
                         {/* Excerpt */}
                         {post.excerpt && <p className="text-gray-600 leading-relaxed mb-6">{post.excerpt}</p>}
 
                         {/* Read More Button */}
                         <div>
-                          <Button
-                            variant="outline"
-                            className="border-gray-300 text-gray-900 hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300 bg-transparent group"
-                          >
-                            Read More
-                            <ChevronRight className="h-4 w-4 ml-1 transition-transform duration-300 group-hover:translate-x-1" />
-                          </Button>
+                          <Link href={`/blog/${post.slug.current}`}>
+                            <Button
+                              variant="outline"
+                              className="border-gray-300 text-gray-900 hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300 bg-transparent group"
+                            >
+                              Read More
+                              <ChevronRight className="h-4 w-4 ml-1 transition-transform duration-300 group-hover:translate-x-1" />
+                            </Button>
+                          </Link>
                         </div>
                       </CardContent>
                     </div>
