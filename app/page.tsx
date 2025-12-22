@@ -9,7 +9,7 @@ import { AnimatedSection } from "@/components/animated-section"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Digital Hall of Fame & Interactive Recognition Display | Touch Archive",
+  title: "Digital Hall of Fame & Interactive Recognition Display",
   description:
     "Transform your hall of fame, awards, and achievements into an engaging digital touchscreen display. Interactive recognition platform for schools, museums, and organizations. Cloud-based, easy to update.",
   keywords: [
@@ -23,12 +23,35 @@ export const metadata: Metadata = {
     "wall of honor",
     "digital awards display",
     "touchscreen kiosk",
+    "hall of fame software",
+    "recognition display system",
+    "digital signage for schools",
+    "museum touchscreen display",
   ],
   openGraph: {
-    title: "Digital Hall of Fame & Interactive Recognition Display",
+    title: "Digital Hall of Fame & Interactive Recognition Display | Touch Archive",
     description:
       "Interactive touchscreen platform for halls of fame, awards, and recognition displays. Honor your legacy with modern technology.",
     type: "website",
+    url: "https://toucharchive.com",
+    images: [
+      {
+        url: "/Touchstone Kiosk.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Touch Archive Digital Hall of Fame Touchscreen Display",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Digital Hall of Fame & Interactive Recognition Display",
+    description:
+      "Transform your hall of fame into an engaging digital touchscreen display. Cloud-based, easy to update.",
+    images: ["/Touchstone Kiosk.jpg"],
+  },
+  alternates: {
+    canonical: "https://toucharchive.com",
   },
 }
 
@@ -53,7 +76,7 @@ export default function HomePage() {
             "Custom Layouts & Templates",
             "Unlimited Categories & Entries",
           ]}
-          imageSrc="/interactive-touchscreen-display-showing-historical.jpg"
+          imageSrc="/Touchscreen Floor Standing Kiosk.jpg"
           imageAlt="Interactive Digital Hall of Fame Touchscreen Display"
         />
       </AnimatedSection>
@@ -69,7 +92,7 @@ export default function HomePage() {
             "Cultural Heritage Archives",
             "Custom Recognition Collections",
           ]}
-          imageSrc="/digital-display-showing-legacy-and-achievements.jpg"
+          imageSrc="/TDS Install - Brown Football.jpeg"
           imageAlt="Digital Hall of Fame Legacy Display"
           reversed
         />
@@ -87,7 +110,7 @@ export default function HomePage() {
             "Advanced Sorting & Filtering",
             "Cross-Linked Content & Media",
           ]}
-          imageSrc="/digital-archive-management-system-on-laptop.jpg"
+          imageSrc="/Wall-mounted_Touchscreen.jpg"
           imageAlt="Digital Hall of Fame Management System"
         />
       </AnimatedSection>

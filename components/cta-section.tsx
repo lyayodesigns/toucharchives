@@ -1,3 +1,4 @@
+import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Calendar, MessageSquare } from "lucide-react"
 
@@ -15,30 +16,34 @@ export function CTASection() {
             started today with a free demo and see how easy it is to create an engaging digital hall of fame.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
-            <Button
-              size="lg"
-              className="bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-6 text-lg transition-all duration-300 hover:scale-105 hover:shadow-xl group"
-            >
-              <Calendar className="w-5 h-5" />
-              Schedule a Demo
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="bg-white/10 hover:bg-white/20 text-white border-white/30 px-8 py-6 text-lg transition-all duration-300 hover:scale-105 backdrop-blur-sm"
-            >
-              <MessageSquare className="w-5 h-5" />
-              Contact Sales
-            </Button>
+            <Link href="https://calendly.com/touchstone-ds/custom-guided-tour?utm_source=webtoucharchive&month=2025-12" target="_blank" rel="noopener noreferrer">
+              <Button
+                size="lg"
+                className="bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-6 text-lg transition-all duration-300 hover:scale-105 hover:shadow-xl group"
+              >
+                <Calendar className="w-5 h-5" />
+                Schedule a Demo
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </Link>
+            <Link href="https://calendly.com/touchstone-ds/custom-guided-tour?utm_source=webtoucharchive&month=2025-12" target="_blank" rel="noopener noreferrer">
+              <Button
+                size="lg"
+                variant="outline"
+                className="bg-white/10 hover:bg-white/20 text-white border-white/30 px-8 py-6 text-lg transition-all duration-300 hover:scale-105 backdrop-blur-sm"
+              >
+                <MessageSquare className="w-5 h-5" />
+                Contact Sales
+              </Button>
+            </Link>
           </div>
           <div className="pt-8 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             <div>
-              <div className="text-4xl font-bold text-accent mb-2">1,000+</div>
+              <div className="text-4xl font-bold text-accent mb-2">150+</div>
               <div className="text-white/80">Active Installations</div>
             </div>
             <div>
-              <div className="text-4xl font-bold text-accent mb-2">50</div>
+              <div className="text-4xl font-bold text-accent mb-2">46</div>
               <div className="text-white/80">States Covered</div>
             </div>
             <div>

@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react"
 import Image from "next/image"
+import Link from "next/link"
 import { Button } from "@/components/ui/button"
 
 export function HeroSection() {
@@ -49,22 +50,24 @@ export function HeroSection() {
               }`}
               style={{ transitionDelay: "400ms" }}
             >
-              <Button
-                size="lg"
-                className="bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-6 text-lg transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(249,115,22,0.5)]"
-              >
-                Get a Free Demo
-              </Button>
+              <Link href="https://calendly.com/touchstone-ds/custom-guided-tour?utm_source=webtoucharchive&month=2025-12" target="_blank" rel="noopener noreferrer">
+                <Button
+                  size="lg"
+                  className="bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-6 text-lg transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(249,115,22,0.5)]"
+                >
+                  Get a Free Demo
+                </Button>
+              </Link>
             </div>
           </div>
           <div
-            className={`relative h-[400px] lg:h-[600px] w-full transition-all duration-700 ${
+            className={`relative h-[400px] lg:h-[600px] w-full transition-all duration-700 rounded-3xl overflow-hidden ${
               isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
             style={{ transitionDelay: "500ms" }}
           >
             <Image
-              src="/modern-touchscreen-display-wall-mounted-showing-di.jpg"
+              src="/Touchstone Kiosk.jpg"
               alt="Digital Hall of Fame Touchscreen Display"
               fill
               className="object-contain"

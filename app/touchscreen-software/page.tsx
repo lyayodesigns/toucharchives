@@ -3,6 +3,7 @@
 import type React from "react"
 
 import Image from "next/image"
+import Link from "next/link"
 import { Check } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
@@ -15,30 +16,33 @@ export default function TouchscreenSoftwarePage() {
     setIsLoaded(true)
   }, [])
 
-  const installations = [
+  const horizontalInstallations = [
     {
       name: "Metropolitan University",
-      image: "/interactive-touchscreen-display-showing-historical.jpg",
+      image: "/installations/installation-horizontal (1).jpg",
     },
     {
       name: "Heritage Museum",
-      image: "/modern-touchscreen-display-wall-mounted-showing-di.jpg",
+      image: "/installations/installation-horizontal (2).jpg",
     },
     {
       name: "Community Arts Center",
-      image: "/digital-display-showing-legacy-and-achievements.jpg",
+      image: "/installations/installation-horizontal (3).jpg",
     },
+  ]
+
+  const verticalInstallations = [
     {
       name: "State Athletic Hall",
-      image: "/interactive-touchscreen-display-showing-historical.jpg",
+      image: "/installations/installation-vertical (1).jpg",
     },
     {
       name: "Academic Library",
-      image: "/digital-archive-management-system-on-laptop.jpg",
+      image: "/installations/installation-vertical (2).jpg",
     },
     {
       name: "Cultural Heritage Center",
-      image: "/modern-touchscreen-display-wall-mounted-showing-di.jpg",
+      image: "/installations/installation-vertical (1).jpeg",
     },
   ]
 
@@ -71,19 +75,23 @@ export default function TouchscreenSoftwarePage() {
               }`}
               style={{ transitionDelay: "300ms" }}
             >
-              <Button
-                size="lg"
-                className="bg-orange-500 hover:bg-orange-600 text-white px-10 py-7 text-lg transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(249,115,22,0.5)]"
-              >
-                Schedule a Demo
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-2 border-white text-white hover:bg-white hover:text-blue-900 px-10 py-7 text-lg bg-transparent transition-all duration-300 hover:scale-105"
-              >
-                Request a Demo
-              </Button>
+              <Link href="https://calendly.com/touchstone-ds/custom-guided-tour?utm_source=webtoucharchive&month=2025-12" target="_blank" rel="noopener noreferrer">
+                <Button
+                  size="lg"
+                  className="bg-orange-500 hover:bg-orange-600 text-white px-10 py-7 text-lg transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(249,115,22,0.5)]"
+                >
+                  Schedule a Demo
+                </Button>
+              </Link>
+              <Link href="https://calendly.com/touchstone-ds/custom-guided-tour?utm_source=webtoucharchive&month=2025-12" target="_blank" rel="noopener noreferrer">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-2 border-white text-white hover:bg-white hover:text-blue-900 px-10 py-7 text-lg bg-transparent transition-all duration-300 hover:scale-105"
+                >
+                  Request a Demo
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
@@ -96,7 +104,7 @@ export default function TouchscreenSoftwarePage() {
             style={{ transitionDelay: "400ms" }}
           >
             <Image
-              src="/modern-touchscreen-display-wall-mounted-showing-di.jpg"
+              src="/Touchstone Kiosk.jpg"
               alt="Interactive Digital Wall of Fame Display"
               fill
               className="object-cover"
@@ -140,7 +148,7 @@ export default function TouchscreenSoftwarePage() {
             </div>
             <div className="relative h-[400px] lg:h-[550px] rounded-xl overflow-hidden shadow-xl group">
               <Image
-                src="/interactive-touchscreen-display-showing-historical.jpg"
+                src="/Touchscreen Floor Standing Kiosk.jpg"
                 alt="Interactive Hall of Fame Display"
                 fill
                 className="object-cover transition-transform duration-500 group-hover:scale-110"
@@ -156,7 +164,7 @@ export default function TouchscreenSoftwarePage() {
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center max-w-7xl mx-auto">
             <div className="relative h-[400px] lg:h-[550px] rounded-xl overflow-hidden shadow-xl order-2 lg:order-1 group">
               <Image
-                src="/digital-display-showing-legacy-and-achievements.jpg"
+                src="/TDS Install - Brown Football.jpeg"
                 alt="Legacy Celebration Display"
                 fill
                 className="object-cover transition-transform duration-500 group-hover:scale-110"
@@ -229,7 +237,7 @@ export default function TouchscreenSoftwarePage() {
             </div>
             <div className="relative h-[400px] lg:h-[550px] rounded-xl overflow-hidden shadow-xl group">
               <Image
-                src="/digital-archive-management-system-on-laptop.jpg"
+                src="/Wall-mounted_Touchscreen.jpg"
                 alt="Complete Software Solution"
                 fill
                 className="object-cover transition-transform duration-500 group-hover:scale-110"
@@ -250,12 +258,12 @@ export default function TouchscreenSoftwarePage() {
               </p>
             </div>
 
-            {/* 3-Column Grid */}
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-              {installations.map((installation, idx) => (
-                <Card
+            {/* Horizontal Images Row */}
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
+              {horizontalInstallations.map((installation, idx) => (
+                <div
                   key={idx}
-                  className="overflow-hidden hover:shadow-2xl transition-all duration-300 bg-white opacity-0 animate-fade-in-up hover:-translate-y-2"
+                  className="overflow-hidden rounded-xl hover:shadow-2xl transition-all duration-300 opacity-0 animate-fade-in-up hover:-translate-y-2"
                   style={{ animationDelay: `${idx * 100}ms`, animationFillMode: "forwards" }}
                 >
                   <div className="relative h-[280px] overflow-hidden group">
@@ -266,10 +274,27 @@ export default function TouchscreenSoftwarePage() {
                       className="object-cover transition-transform duration-500 group-hover:scale-110"
                     />
                   </div>
-                  <CardContent className="p-6">
-                    <h3 className="text-xl font-semibold text-gray-900 text-center">{installation.name}</h3>
-                  </CardContent>
-                </Card>
+                </div>
+              ))}
+            </div>
+
+            {/* Vertical Images Row */}
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+              {verticalInstallations.map((installation, idx) => (
+                <div
+                  key={idx}
+                  className="overflow-hidden rounded-xl hover:shadow-2xl transition-all duration-300 opacity-0 animate-fade-in-up hover:-translate-y-2"
+                  style={{ animationDelay: `${(idx + 3) * 100}ms`, animationFillMode: "forwards" }}
+                >
+                  <div className="relative h-[380px] overflow-hidden group">
+                    <Image
+                      src={installation.image || "/placeholder.svg"}
+                      alt={installation.name}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-110"
+                    />
+                  </div>
+                </div>
               ))}
             </div>
           </div>
@@ -288,19 +313,23 @@ export default function TouchscreenSoftwarePage() {
               that honors your legacy and inspires your community.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-              <Button
-                size="lg"
-                className="bg-orange-500 hover:bg-orange-600 text-white px-10 py-7 text-lg transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(249,115,22,0.5)]"
-              >
-                Schedule Your Demo
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-2 border-white text-white hover:bg-white hover:text-blue-900 px-10 py-7 text-lg bg-transparent transition-all duration-300 hover:scale-105"
-              >
-                Contact Sales
-              </Button>
+              <Link href="https://calendly.com/touchstone-ds/custom-guided-tour?utm_source=webtoucharchive&month=2025-12" target="_blank" rel="noopener noreferrer">
+                <Button
+                  size="lg"
+                  className="bg-orange-500 hover:bg-orange-600 text-white px-10 py-7 text-lg transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(249,115,22,0.5)]"
+                >
+                  Schedule Your Demo
+                </Button>
+              </Link>
+              <Link href="https://calendly.com/touchstone-ds/custom-guided-tour?utm_source=webtoucharchive&month=2025-12" target="_blank" rel="noopener noreferrer">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-2 border-white text-white hover:bg-white hover:text-blue-900 px-10 py-7 text-lg bg-transparent transition-all duration-300 hover:scale-105"
+                >
+                  Contact Sales
+                </Button>
+              </Link>
             </div>
           </div>
         </div>

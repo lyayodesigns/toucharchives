@@ -15,7 +15,7 @@ export function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 hover:opacity-90 transition-opacity">
             <div className="h-6 w-1 bg-orange-500" />
-            <span className="text-lg font-semibold text-gray-900">Touchscreen Software by Touchstone</span>
+            <span className="text-lg font-semibold text-gray-900">Touch Archive by Touchstone</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -32,7 +32,9 @@ export function Navbar() {
             <Link href="/blog" className="text-gray-700 hover:text-orange-500 transition-colors font-medium">
               Blog
             </Link>
-            <Button className="bg-orange-500 hover:bg-orange-600 text-white">Book A Demo</Button>
+            <Link href="https://calendly.com/touchstone-ds/custom-guided-tour?utm_source=webtoucharchive&month=2025-12" target="_blank" rel="noopener noreferrer">
+              <Button className="bg-orange-500 hover:bg-orange-600 text-white">Book A Demo</Button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -70,7 +72,9 @@ export function Navbar() {
               >
                 Blog
               </Link>
-              <Button className="bg-orange-500 hover:bg-orange-600 text-white w-full">Book A Demo</Button>
+              <Link href="https://calendly.com/touchstone-ds/custom-guided-tour?utm_source=webtoucharchive&month=2025-12" target="_blank" rel="noopener noreferrer" onClick={() => setIsOpen(false)}>
+                <Button className="bg-orange-500 hover:bg-orange-600 text-white w-full">Book A Demo</Button>
+              </Link>
             </div>
           </div>
         )}

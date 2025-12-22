@@ -5,6 +5,48 @@ import { Button } from "@/components/ui/button"
 import { ChevronRight } from "lucide-react"
 import { client, urlFor } from "@/lib/sanity"
 import type { BlogPost } from "@/types/blog"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Blog - Digital Hall of Fame Insights & Resources",
+  description:
+    "Explore articles, guides, and insights about digital hall of fame displays, interactive touchscreen technology, and recognition systems. Learn best practices for showcasing your legacy.",
+  keywords: [
+    "digital hall of fame blog",
+    "touchscreen display articles",
+    "recognition display guides",
+    "hall of fame best practices",
+    "interactive display insights",
+    "digital signage blog",
+    "museum technology",
+    "athletic hall of fame tips",
+  ],
+  openGraph: {
+    title: "Blog - Digital Hall of Fame Insights & Resources | Touch Archive",
+    description:
+      "Explore articles, guides, and insights about digital hall of fame displays, interactive touchscreen technology, and recognition systems.",
+    type: "website",
+    url: "https://toucharchive.com/blog",
+    images: [
+      {
+        url: "/Touchstone Kiosk.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Touch Archive Blog",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Blog - Digital Hall of Fame Insights & Resources",
+    description:
+      "Explore articles, guides, and insights about digital hall of fame displays and interactive touchscreen technology.",
+    images: ["/Touchstone Kiosk.jpg"],
+  },
+  alternates: {
+    canonical: "https://toucharchive.com/blog",
+  },
+}
 
 async function getBlogPosts(): Promise<BlogPost[]> {
   const query = `*[_type == "post"] | order(publishedAt desc) {

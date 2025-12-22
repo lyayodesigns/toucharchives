@@ -4,7 +4,7 @@ export function Footer() {
   return (
     <footer className="bg-gray-900 text-white py-12">
       <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-3 gap-8 mb-8">
+        <div className="grid md:grid-cols-2 gap-8 mb-8">
           <div>
             <div className="flex items-center gap-2 mb-4">
               <div className="h-6 w-1 bg-orange-500" />
@@ -15,11 +15,6 @@ export function Footer() {
               <br />
               Newark, Delaware 19702
             </p>
-          </div>
-          <div>
-            <h4 className="font-semibold mb-4">Contact</h4>
-            <p className="text-gray-400 mb-2">support@toucharchive.com</p>
-            <p className="text-gray-400">(555) 123-4567</p>
           </div>
           <div>
             <h4 className="font-semibold mb-4">Quick Links</h4>
@@ -43,7 +38,7 @@ export function Footer() {
           </div>
         </div>
         <div className="border-t border-gray-800 pt-8 text-center text-gray-400">
-          <p>&copy; 2025 Touch Archive by Touchstone. All rights reserved.</p>
+          <p>&copy; 2025 Touch Archive by <Link href="https://touchstone-ds.com/" target="_blank" rel="noopener noreferrer" className="hover:text-orange-500 transition-colors">Touchstone</Link>. All rights reserved.</p>
         </div>
       </div>
     </footer>
