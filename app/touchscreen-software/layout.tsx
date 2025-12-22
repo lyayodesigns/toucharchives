@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     description:
       "Discover our interactive touchscreen software for digital halls of fame, recognition walls, and award displays. Cloud-based, easy to use platform.",
     type: "website",
-    url: "https://toucharchive.com/touchscreen-software",
+    url: "https://toucharchives.com/touchscreen-software",
     images: [
       {
         url: "/Touchstone Kiosk.jpg",
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     images: ["/Touchstone Kiosk.jpg"],
   },
   alternates: {
-    canonical: "https://toucharchive.com/touchscreen-software",
+    canonical: "https://toucharchives.com/touchscreen-software",
   },
 }
 

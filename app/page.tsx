@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     description:
       "Interactive touchscreen platform for halls of fame, awards, and recognition displays. Honor your legacy with modern technology.",
     type: "website",
-    url: "https://toucharchive.com",
+    url: "https://toucharchives.com",
     images: [
       {
         url: "/Touchstone Kiosk.jpg",
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     images: ["/Touchstone Kiosk.jpg"],
   },
   alternates: {
-    canonical: "https://toucharchive.com",
+    canonical: "https://toucharchives.com",
   },
 }
 

@@ -10,7 +10,7 @@ const _geist = Geist({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://toucharchive.com"),
+  metadataBase: new URL("https://toucharchives.com"),
   title: {
     default: "Touch Archive - Digital Hall of Fame & Interactive Recognition Display",
     template: "%s | Touch Archive",
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://toucharchive.com",
+    url: "https://toucharchives.com",
     siteName: "Touch Archive",
     title: "Touch Archive - Digital Hall of Fame & Interactive Recognition Display",
     description:
